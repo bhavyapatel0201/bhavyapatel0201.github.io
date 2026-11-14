@@ -1,0 +1,11 @@
+# Text files: always LF in the repo and on checkout
+* text=auto eol=lf
+
+# Never touch binary files (CRLF conversion would corrupt them)
+*.pdf binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.gif binary
+*.ico binary

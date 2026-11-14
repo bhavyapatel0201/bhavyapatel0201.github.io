@@ -1,0 +1,11 @@
+# Dependencies / tooling
+node_modules/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+
+# Superseded resume: nothing links to it (the site uses Bhavya_Patel_Master_Resume.pdf)
+assets/Bhavya_Resume.pdf
