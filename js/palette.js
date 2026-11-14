@@ -196,5 +196,13 @@ document.addEventListener('DOMContentLoaded', () => {
     open();
   }));
 
+  // Show ⌘ instead of Ctrl on Apple devices in every shortcut hint
+  const platform = [navigator.userAgentData?.platform, navigator.platform, navigator.userAgent].join(' ');
+  const isMac = /Mac|iPhone|iPad/.test(platform);
+  if (isMac) {
+    document.querySelectorAll('.mod-key').forEach((k) => { k.textContent = '⌘'; });
+    document.querySelectorAll('[data-open-palette][title]').forEach((b) => { b.title = b.title.replace('Ctrl+K', '⌘K'); });
+  }
+
   window.Palette = { open, close };
 });

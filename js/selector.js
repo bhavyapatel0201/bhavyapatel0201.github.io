@@ -214,7 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
       dismissHint();
       d.pane.style.transformOrigin = '';
       showSection(target, { scroll: false, dir: delta, from: reduced() ? null : d });
-      history.replaceState(null, '', `#${target}`);
     },
     onCancel: () => {
       wrapper.classList.remove('is-dragging');
@@ -254,7 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!isSelectable(id)) return;
       e.preventDefault();
       showSection(id, { scroll: true });
-      history.replaceState(null, '', `#${id}`);
     });
   });
 
@@ -268,7 +266,16 @@ document.addEventListener('DOMContentLoaded', () => {
     hint.querySelector('button')?.addEventListener('click', dismissHint);
   }
 
-  const hash = window.location.hash.slice(1);
+  // The page always opens on the hero. A section in the address (e.g. /#projects, saved by
+  // the <head> script before it was cleared) only decides which tab is preselected.
+  const hash = window.__initialHash || '';
   showSection(isSelectable(hash) ? hash : order[0], { scroll: false, animate: false });
-  if (isSelectable(hash)) requestAnimationFrame(() => scrollToEl(document.getElementById(hash)));
+
+  // Typing a #section into the address bar (no reload) switches to that tab
+  window.addEventListener('hashchange', () => {
+    const id = window.location.hash.slice(1);
+    if (!isSelectable(id)) return;
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+    showSection(id, { scroll: true });
+  });
 });

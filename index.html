@@ -24,6 +24,13 @@
         theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
       }
       root.setAttribute('data-theme', theme);
+
+      // Always open on the hero ("Hi, I'm Bhavya Patel"): no restored scroll position and
+      // no jump to an old #section in the address. The section is remembered only to
+      // preselect its tab (js/selector.js).
+      try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+      window.__initialHash = location.hash.slice(1);
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
     })();
   </script>
 
@@ -190,6 +197,13 @@
             <span>Contact Me</span>
           </a>
         </div>
+
+        <!-- Keyboard tip for the command palette (hidden on touch screens; ⌘ on Mac via js/palette.js) -->
+        <button type="button" class="palette-hint reveal delay-3" data-open-palette>
+          <span>Press</span>
+          <kbd class="mod-key">Ctrl</kbd><kbd>K</kbd>
+          <span>to search &amp; jump anywhere</span>
+        </button>
 
         <!-- Stats Grid -->
         <div class="hero-stats-grid reveal delay-3" id="heroStatsGrid">
@@ -644,7 +658,7 @@
     <div class="container footer-content">
       <div>
         <p>© <span id="footerYear">2026</span> <strong id="footerName">Bhavya Patel</strong> • University of Windsor</p>
-        <p style="font-size: 0.8rem; margin-top: 0.25rem;">Configured via <code style="font-family: var(--font-mono); color: var(--accent-primary);">/data/content.json</code></p>
+        <p class="footer-palette-tip">Tip: press <kbd class="mod-key">Ctrl</kbd> <kbd>K</kbd> (or <kbd>/</kbd>) to open the command palette</p>
       </div>
 
       <div class="footer-socials">
