@@ -567,8 +567,8 @@ window.DEFAULT_CONTENT_FALLBACK = {
     "location": "Windsor, ON, Canada",
     "socialLinks": [
       { "platform": "Email", "url": "mailto:patel61d@uwindsor.ca", "handle": "patel61d@uwindsor.ca" },
-      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/bhavya-patel-data", "handle": "linkedin.com/in/bhavya-patel-data" },
-      { "platform": "GitHub", "url": "https://github.com/bhavyapatel0201", "handle": "github.com/bhavyapatel0201" }
+      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/bhavya-patel-data", "handle": "Bhavya Patel" },
+      { "platform": "GitHub", "url": "https://github.com/bhavyapatel0201", "handle": "Bhavya Patel" }
     ]
   }
 };
