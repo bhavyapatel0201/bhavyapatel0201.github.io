@@ -4,12 +4,12 @@ A modern, responsive portfolio website custom-tailored for **Bhavya Patel**, Mas
 
 ---
 
-## 🚀 Live Preview
+## 🚀 Live Site
 
-The local server is actively running at:
-👉 **[http://localhost:3000](http://localhost:3000)**
+👉 **[https://bhavyapatel0201.github.io](https://bhavyapatel0201.github.io)** (GitHub Pages, deployed from the `main` branch)
 
-*(Or run `python -m http.server 3000` from this directory if restarting).*
+To preview locally: run `python -m http.server 3000` in this folder and open http://localhost:3000.
+Publishing a change: commit and `git push`; GitHub Pages updates within a minute or two.
 
 ---
 
