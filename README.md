@@ -71,7 +71,7 @@ These drive the filter buttons (AI/ML, Data, Systems, Web). To add a new categor
 ### Accessibility & motion
 - Visitors with **reduced motion** turned on get no reveal, typing or hover-lift animations, and instant scrolling.
 - The theme follows the OS setting until the visitor uses the toggle; that choice is then saved.
-- The contact form only simulates sending. Hook up a service (e.g. Formspree) in `sendMessage()` in `js/contact.js`.
+- The contact form emails messages to you through [FormSubmit](https://formsubmit.co) (no account needed). **The first real submission sends an activation email to patel61d@uwindsor.ca. Click the link in it once**, or messages won't be delivered. To use another service, change `contact.formEndpoint` in `data/content.json` (and `data-endpoint` on the form in `index.html`). If sending fails, visitors get a pre-filled email link instead.
 
 ### 3D background, swipes & section order
 - **Background** (`js/scene.js`): one fixed canvas behind the page. Scrolling flies through it (down = forward, up = back) and morphs the centre shape per section. Change a section's shape in `SHAPE_FOR` at the top of the file.
