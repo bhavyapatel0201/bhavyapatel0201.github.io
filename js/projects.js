@@ -346,5 +346,6 @@ window.ProjectsController = (function () {
     }
   }
 
-  return { init };
+  // open(id): used by the command palette
+  return { init, open: (id) => openProjectModal(id) };
 })();

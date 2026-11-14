@@ -78,3 +78,8 @@ These drive the filter buttons (AI/ML, Data, Systems, Web). To add a new categor
 - **Swipes** (`js/gestures.js`, `js/selector.js`, `js/projects.js`): swipe left/right on a section to flip to the next one; swipe in the project popup to change project, drag its top handle down to close; swipe the hero to spin the background. Trackpad swipes, mouse drags and arrow keys do the same.
 - **Section order** is the order of the `<section>` blocks inside `#selectableSectionsWrapper` in `index.html`, plus the matching selector tabs and rail links.
 - **Resume**: the download buttons use `assets/Bhavya_Patel_Master_Resume.pdf` (set via `profile.resumeUrl` in `data/content.json`).
+
+### Command palette, "Now" panel & analytics
+- **Command palette** (`js/palette.js`): press `/` or `Ctrl`+`K` (or the `>_` button; on phones it's in the menu). Jump to sections, open projects/certificates, download the resume, copy your email, switch theme, or try `whoami`. Commands are built from `content.json`, so new projects appear automatically.
+- **Now panel**: edit `now` and `nowUpdated` in `data/content.json`. Keep it current, since a stale "now" looks worse than none.
+- **Analytics** (off by default): create a free account at [goatcounter.com](https://www.goatcounter.com) (no cookies, privacy-friendly), then set `"analytics": { "goatcounter": "yourcode" }` in `data/content.json`. It never loads on localhost.

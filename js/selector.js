@@ -137,6 +137,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const step = (delta) => order[order.indexOf(currentSection) + delta];
 
+  // Edge fades on the tab row only where tabs are actually scrolled out of view
+  const pillRow = pillBtns[0].parentElement;
+  function updateFade() {
+    const max = pillRow.scrollWidth - pillRow.clientWidth;
+    const edge = 8; // px tolerance (snap points and sub-pixel widths)
+    pillRow.classList.toggle('fade-start', max > edge && pillRow.scrollLeft > edge);
+    pillRow.classList.toggle('fade-end', max > edge && pillRow.scrollLeft < max - edge);
+  }
+  pillRow.addEventListener('scroll', updateFade, { passive: true });
+  window.addEventListener('resize', updateFade, { passive: true });
+  updateFade();
+
+  // When the visitor is reading a section outside the explorer, quiet the tab highlight
+  function updateOutside() {
+    const top = (el) => { let y = 0; for (let n = el; n; n = n.offsetParent) y += n.offsetTop; return y; };
+    const probe = window.scrollY + window.innerHeight * 0.4;
+    const start = top(wrapper);
+    selectorBar?.classList.toggle('is-outside', probe < start || probe > start + wrapper.offsetHeight);
+  }
+  window.addEventListener('scroll', updateOutside, { passive: true });
+  document.addEventListener('portfolio:sections-changed', () => requestAnimationFrame(updateOutside));
+  updateOutside();
+
   // --- Tabs, mode buttons, keyboard ---
   pillBtns.forEach((btn) => btn.addEventListener('click', () => showSection(btn.dataset.section)));
   modeTabbedBtn?.addEventListener('click', () => setMode('tabbed'));

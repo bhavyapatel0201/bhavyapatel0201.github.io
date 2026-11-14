@@ -28,6 +28,25 @@ window.DEFAULT_CONTENT_FALLBACK = {
     { "label": "Engineering Internships", "value": "4" },
     { "label": "Real-Time NLP Docs Parsed", "value": "200+" }
   ],
+  "now": [
+    {
+      "label": "Studying",
+      "text": "Master of Applied Computing at the University of Windsor"
+    },
+    {
+      "label": "Recently earned",
+      "text": "Introduction to Data Security & Data Management Concepts (DataCamp, Jul 2026)"
+    },
+    {
+      "label": "Looking for",
+      "text": "A 4–8 month co-op starting January 2027"
+    },
+    {
+      "label": "Building",
+      "text": "This portfolio: a framework-free 3D canvas scene with swipe navigation"
+    }
+  ],
+  "nowUpdated": "Nov 2026",
   "specializations": [
     {
       "id": "aiml",

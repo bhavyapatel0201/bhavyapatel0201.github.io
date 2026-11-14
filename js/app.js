@@ -46,12 +46,45 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // --- Hydrate Contact & Footer ---
   hydrateContact(content);
+  hydrateNow(content);
+
+  // Shared with the command palette
+  window.PortfolioData = content;
+  loadAnalytics(content.analytics);
 
   // Scroll-reveal for everything rendered above, then type the hero tagline
   window.Motion.observe(document);
   window.Depth?.tilt(document);
   window.Motion.type(document.getElementById('heroTagline'));
 });
+
+// "Now" panel in the hero: what Bhavya is doing at the moment (edit "now" in content.json)
+function hydrateNow(data) {
+  const panel = document.getElementById('nowPanel');
+  const listEl = document.getElementById('nowList');
+  if (!panel || !listEl) return;
+  if (!data.now || !data.now.length) { panel.hidden = true; return; }
+  listEl.innerHTML = data.now.map((item) => `
+    <li class="now-item">
+      <span class="now-label">${item.label}</span>
+      <span class="now-text">${item.text}</span>
+    </li>
+  `).join('');
+  const updated = document.getElementById('nowUpdated');
+  if (updated) updated.textContent = data.nowUpdated ? `Updated ${data.nowUpdated}` : '';
+}
+
+// Privacy-friendly visit counts with GoatCounter (no cookies). Off until a code is set
+// in content.json: "analytics": { "goatcounter": "yourcode" } (yourcode.goatcounter.com).
+function loadAnalytics(config) {
+  const code = config && String(config.goatcounter || '').trim();
+  if (!code || !/^[a-z0-9-]+$/i.test(code) || location.protocol === 'file:' || /^(localhost|127\.)/.test(location.hostname)) return;
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://gc.zgo.at/count.js';
+  script.dataset.goatcounter = `https://${code}.goatcounter.com/count`;
+  document.head.appendChild(script);
+}
 
 function hydrateHero(data) {
   const { profile, stats } = data;

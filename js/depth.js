@@ -27,7 +27,9 @@ window.Depth = (function () {
           const r = card.getBoundingClientRect();
           const px = (e.clientX - r.left) / r.width; // 0..1
           const py = (e.clientY - r.top) / r.height;
-          const max = Math.min(9, 2600 / Math.max(r.width, 1)); // big cards tilt less
+          // Gentle angles keep text crisp (steep 3D tilts make the browser blur it);
+          // big cards tilt less
+          const max = Math.min(4, 1600 / Math.max(r.width, 1));
           card.style.setProperty('--ry', `${((px - 0.5) * 2 * max).toFixed(2)}deg`);
           card.style.setProperty('--rx', `${((0.5 - py) * 2 * max).toFixed(2)}deg`);
           card.style.setProperty('--gx', `${(px * 100).toFixed(1)}%`);
