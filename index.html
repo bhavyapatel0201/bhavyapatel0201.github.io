@@ -170,20 +170,17 @@
 
         <!-- Elevator Pitch / Tagline -->
         <p class="hero-tagline reveal delay-2" id="heroTagline">
-          Master of Applied Computing student at the University of Windsor with hands-on industry experience building NLP pipelines, time-series forecasting models, star-schema data warehouses, and automated backend workflows.
+          Master of Applied Computing student at the University of Windsor, looking for a 4–8 month co-op from January 2027. I build NLP extraction tools, forecasting models and PostgreSQL warehouses.
         </p>
 
         <!-- CTA Buttons -->
         <div class="hero-cta-group reveal delay-3">
           <a href="#projects" class="btn btn-primary">
-            <span>Explore Projects</span>
+            <span>See my projects</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
-          </a>
-          <a href="#experience" class="btn btn-secondary">
-            <span>Work Experience</span>
           </a>
           <a href="assets/Bhavya_Patel_Master_Resume.pdf" download="Bhavya_Patel_Master_Resume.pdf" class="btn btn-secondary resume-download-trigger" id="heroResumeBtn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -191,11 +188,9 @@
               <polyline points="7 10 12 15 17 10"></polyline>
               <line x1="12" y1="15" x2="12" y2="3"></line>
             </svg>
-            <span>Download Master Resume</span>
+            <span>Download resume</span>
           </a>
-          <a href="#contact" class="btn btn-outline">
-            <span>Contact Me</span>
-          </a>
+          <a href="#contact" class="hero-text-link">or get in touch <span aria-hidden="true">→</span></a>
         </div>
 
         <!-- Keyboard tip for the command palette (hidden on touch screens; ⌘ on Mac via js/palette.js) -->
@@ -761,5 +756,9 @@
   <script src="js/selector.js"></script>
   <script src="js/palette.js"></script>
   <script src="js/app.js"></script>
+  <!-- GSAP (cdnjs): the scroll-drawn Experience timeline. The page works without it. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/gsap-motion.js" defer></script>
 </body>
 </html>

@@ -390,7 +390,10 @@ window.Scene = (function () {
     drawFloor(cx, cy);
     drawFloaters(cx, cy, false);
 
-    // Object
+    // Object: dimmed so the hero text in front of it stays readable, and dimmer again
+    // once the visitor scrolls into the content sections
+    const past = Math.min(1, window.scrollY / Math.max(1, h));
+    const oa = colors.alpha * (0.5 - past * (w < 768 ? 0.32 : 0.26));
     const R = Math.min(w, h) * (w < 640 ? 0.32 : 0.28);
     const proj = cur.map((p) => project(p, R, cx, cy));
     const linkSets = [[shapes[shapeA].links, 1 - mixShown], [shapes[shapeB].links, mixShown]];
@@ -399,7 +402,7 @@ window.Scene = (function () {
       if (weight < 0.02) return;
       links.forEach(([a, b]) => {
         const pa = proj[a]; const pb = proj[b];
-        ctx.globalAlpha = (0.06 + (1 - ((pa[2] + pb[2]) / 2 + 1.3) / 2.6) * 0.32) * weight * colors.alpha;
+        ctx.globalAlpha = (0.06 + (1 - ((pa[2] + pb[2]) / 2 + 1.3) / 2.6) * 0.32) * weight * oa;
         ctx.beginPath(); ctx.moveTo(pa[0], pa[1]); ctx.lineTo(pb[0], pb[1]); ctx.stroke();
       });
     });
@@ -409,11 +412,11 @@ window.Scene = (function () {
       const [x, y, z, persp] = proj[i];
       const near = Math.max(0, Math.min(1, 1 - (z + 1) / 2)); // 1 = front, 0 = back
       const r = 0.8 + persp * persp * 2.6;
-      ctx.globalAlpha = (0.18 + near * 0.75) * colors.alpha;
+      ctx.globalAlpha = (0.18 + near * 0.75) * oa;
       ctx.fillStyle = colors.node;
       ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
       if (near > 0.45 && r > 2) { // specular highlight on front nodes
-        ctx.globalAlpha = (near - 0.3) * 0.8 * colors.alpha;
+        ctx.globalAlpha = (near - 0.3) * 0.8 * oa;
         ctx.fillStyle = colors.star;
         ctx.beginPath(); ctx.arc(x - r * 0.35, y - r * 0.35, r * 0.4, 0, Math.PI * 2); ctx.fill();
       }
@@ -425,7 +428,7 @@ window.Scene = (function () {
       ctx.fillStyle = colors.link;
       pulses.forEach((pl) => {
         const pa = proj[pl.a]; const pb = proj[pl.b];
-        ctx.globalAlpha = netWeight * 0.9 * colors.alpha;
+        ctx.globalAlpha = netWeight * 0.9 * oa;
         ctx.beginPath(); ctx.arc(pa[0] + (pb[0] - pa[0]) * pl.t, pa[1] + (pb[1] - pa[1]) * pl.t, 2, 0, Math.PI * 2); ctx.fill();
       });
     }

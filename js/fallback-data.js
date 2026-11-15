@@ -1,6 +1,7 @@
 /**
- * Fallback Content Object for Bhavya Patel
- * Synchronized with /data/content.json to support offline / file:// protocol previews
+ * GENERATED from data/content.json; do not edit by hand.
+ * Used only when the page is opened straight from disk (file://), where fetch() is blocked.
+ * Regenerate after editing content.json:  node tools/build-fallback.js
  */
 window.DEFAULT_CONTENT_FALLBACK = {
   "profile": {
@@ -10,23 +11,50 @@ window.DEFAULT_CONTENT_FALLBACK = {
     "university": "University of Windsor",
     "avatar": "assets/images/bhavya-patel.jpg",
     "specializationBadge": "AI/ML • Data Engineering • Systems & Automation",
-    "tagline": "Master of Applied Computing student at the University of Windsor with hands-on industry experience building NLP pipelines, time-series forecasting models, star-schema data warehouses, and automated backend workflows.",
-    "bio": "I am a graduate student in Applied Computing at the University of Windsor, holding a B.Tech in Computer Engineering (3.45/4.0 GPA). With 4 industry internships spanning AI/ML engineering, software development, and automation, I specialize in bridging machine learning with robust data architectures and systems-level programming.",
+    "tagline": "Master of Applied Computing student at the University of Windsor, looking for a 4–8 month co-op from January 2027. I build NLP extraction tools, forecasting models and PostgreSQL warehouses.",
+    "bio": "I'm a Master of Applied Computing student at the University of Windsor. Before that I studied Computer Engineering at CHARUSAT in Gujarat (GPA 3.45/4.0) and worked four internships in AI/ML and software development.",
     "location": "Windsor, ON, Canada",
     "phone": "+1 (289) 968-3185",
-    "availabilityStatus": "Open to 4–8 Month Co-Op Starting Jan 2027",
+    "availabilityStatus": "Open to a 4–8 month co-op from January 2027",
     "resumeUrl": "assets/Bhavya_Patel_Master_Resume.pdf",
     "socials": {
       "github": "https://github.com/bhavyapatel0201",
       "linkedin": "https://www.linkedin.com/in/bhavya-patel-data",
       "email": "patel61d@uwindsor.ca"
-    }
+    },
+    "bio2": "At Digikentro I built an NLP system that parsed nearly 200 resumes in real time. At Agevole I built a SARIMAX model that forecast stock prices for 10 companies, with a Streamlit dashboard that cut insight-extraction time by about 40%.",
+    "facts": [
+      {
+        "label": "Based in",
+        "value": "Windsor, Ontario"
+      },
+      {
+        "label": "Studying",
+        "value": "Master of Applied Computing, since Jan 2026"
+      },
+      {
+        "label": "Internships",
+        "value": "4, from 2023 to 2025"
+      }
+    ]
   },
   "stats": [
-    { "label": "Model Accuracy (Plant CNN)", "value": "96.58%" },
-    { "label": "Query Latency Reduction", "value": "30–60%" },
-    { "label": "Engineering Internships", "value": "4" },
-    { "label": "Real-Time NLP Docs Parsed", "value": "200+" }
+    {
+      "label": "Plant disease CNN accuracy",
+      "value": "96.58%"
+    },
+    {
+      "label": "Lower query latency (warehouse)",
+      "value": "30–60%"
+    },
+    {
+      "label": "Internships, 2023–2025",
+      "value": "4"
+    },
+    {
+      "label": "Resumes parsed in real time",
+      "value": "~200"
+    }
   ],
   "now": [
     {
@@ -47,6 +75,9 @@ window.DEFAULT_CONTENT_FALLBACK = {
     }
   ],
   "nowUpdated": "Nov 2026",
+  "analytics": {
+    "goatcounter": ""
+  },
   "specializations": [
     {
       "id": "aiml",
@@ -80,12 +111,16 @@ window.DEFAULT_CONTENT_FALLBACK = {
       "company": "Digikentro",
       "location": "Vadodara, India",
       "period": "Aug 2025 – Nov 2025",
-      "skills": ["NLP", "n8n Automation", "Python", "Root-Cause Analysis", "REST APIs"],
+      "skills": [
+        "NLP",
+        "Python",
+        "n8n",
+        "REST APIs"
+      ],
       "highlights": [
-        "Built and validated an NLP-based resume/document parsing and extraction system, processing nearly 200 files/resumes in real time against expected results.",
-        "Built n8n automation workflows to streamline repetitive parts of a data-processing pipeline, improving reliability of routine system operations.",
-        "Diagnosed software issues through systematic debugging and root-cause analysis, working mostly independently and documenting findings clearly for the team.",
-        "Documented technical findings and requirements with cross-functional stakeholders, clarifying scope and expectations before implementation began."
+        "Built and validated an NLP resume-parsing system that processed nearly 200 resumes in real time against expected results.",
+        "Built n8n workflows to automate repetitive steps in a data-processing pipeline.",
+        "Debugged issues through root-cause analysis, mostly on my own, and documented the findings for the team."
       ]
     },
     {
@@ -94,12 +129,15 @@ window.DEFAULT_CONTENT_FALLBACK = {
       "company": "Kintu Designs Pvt. Ltd.",
       "location": "Surat, India",
       "period": "Dec 2024 – Apr 2025",
-      "skills": ["Statistical Testing", "Cross-Validation", "Data Quality", "Stakeholder Communication"],
+      "skills": [
+        "Python",
+        "Statistical testing",
+        "Cross-validation"
+      ],
       "highlights": [
-        "Analyzed and interpreted multi-source datasets, applying cross-validation and statistical testing to confirm data quality before reporting.",
-        "Investigated data-integrity issues to isolate root causes, documenting assumptions, limitations, and recommended next steps for the wider team.",
-        "Communicated technical findings, assumptions, and results clearly and consistently to non-technical stakeholders and business partners.",
-        "Worked independently through the full project cycle, from framing open questions through validating and presenting final findings to stakeholders."
+        "Analyzed multi-source datasets, using cross-validation and statistical tests to confirm data quality before reporting.",
+        "Traced data-integrity issues to their root cause and documented assumptions, limits and next steps.",
+        "Presented findings to non-technical stakeholders and business partners."
       ]
     },
     {
@@ -108,11 +146,15 @@ window.DEFAULT_CONTENT_FALLBACK = {
       "company": "Agevole Innovation Pvt. Ltd.",
       "location": "Surat, India",
       "period": "May 2024 – June 2024",
-      "skills": ["SARIMAX", "Streamlit", "Python", "Time-Series", "pandas"],
+      "skills": [
+        "Python",
+        "SARIMAX",
+        "Streamlit",
+        "pandas"
+      ],
       "highlights": [
-        "Built a SARIMAX-based stock forecasting model covering 10 major companies, incorporating real-time company news and developments as predictive signals.",
-        "Built a Streamlit dashboard surfacing forecast outputs and trend data, cutting insight-extraction time by roughly 40% for stakeholders.",
-        "Documented modeling methodology, assumptions, and trade-offs in detail before presenting results and recommendations to stakeholders."
+        "Built a SARIMAX model that forecast stock prices for 10 major companies, using real-time company news as a signal.",
+        "Built a Streamlit dashboard for the forecasts that cut insight-extraction time by about 40%."
       ]
     },
     {
@@ -121,12 +163,16 @@ window.DEFAULT_CONTENT_FALLBACK = {
       "company": "UniteIT",
       "location": "Ahmedabad, India",
       "period": "May 2023 – June 2023",
-      "skills": ["Node.js", "JavaScript", "REST APIs", "Unit/Integration Testing", "Git"],
+      "skills": [
+        "Node.js",
+        "JavaScript",
+        "REST APIs",
+        "Git"
+      ],
       "highlights": [
-        "Delivered Node.js/JavaScript REST API changes through the full development lifecycle, from requirements through implementation, testing, and release.",
-        "Created and executed unit and integration test cases to validate functionality before deployment, documenting results clearly for the wider engineering team.",
-        "Collaborated within an engineering team through Git version control and structured peer code review, incorporating feedback before merging changes.",
-        "Investigated integration defects using root-cause analysis, debugging across application layers and retesting systematically after fixes were applied."
+        "Shipped Node.js REST API changes from requirements through implementation, testing and release.",
+        "Wrote unit and integration tests before deployment and fixed integration defects across layers.",
+        "Worked through Git and peer code review in an engineering team."
       ]
     }
   ],
@@ -135,231 +181,248 @@ window.DEFAULT_CONTENT_FALLBACK = {
       "id": "sales-data-warehouse",
       "title": "Adaptive Sales Data Warehouse",
       "category": "data",
-      "tags": ["PostgreSQL", "SQL", "Docker", "ETL", "Star-Schema"],
-      "summary": "High-performance star-schema data warehouse in PostgreSQL with workload-aware indexing cutting query latency by 30–60%.",
-      "metrics": "30–60% Query Latency Cut • 12-Config Matrix Tested",
-      "details": {
-        "problem": "Unoptimized relational schemas caused high query latency and resource bottlenecks on complex analytical reports across large sales datasets.",
-        "solution": "Designed a star-schema dimensional data model with workload-aware B-tree/composite indexing in PostgreSQL, backed by a reproducible Dockerized environment.",
-        "architecture": "Raw Sales Transactions ➔ ETL Ingestion Script ➔ Staging Schema ➔ PostgreSQL Star-Schema (Fact & Dimension Tables) ➔ Indexed Analytical Queries",
-        "highlights": [
-          "Benchmarked query performance across a 12-configuration matrix, systematically validating 30–60% latency reductions",
-          "Containerized database environment with Docker for reproducible development and automated benchmarking",
-          "Documented schema and configuration methodology in detail for seamless developer handoff"
-        ]
-      },
+      "tags": [
+        "PostgreSQL",
+        "SQL",
+        "Docker",
+        "ETL"
+      ],
+      "summary": "Star-schema sales warehouse in PostgreSQL with workload-aware indexing. Benchmarks across 12 configurations showed 30–60% lower query latency.",
       "links": {
         "github": "https://github.com/bhavyapatel0201/adaptive-warehouse",
         "demo": ""
-      }
+      },
+      "details": {
+        "highlights": [
+          "Designed a star-schema data model in PostgreSQL with workload-aware indexing for analytics and reporting on a full sales dataset.",
+          "Benchmarked queries across a 12-configuration matrix to confirm which changes cut latency by 30–60%.",
+          "Ran the database in Docker so development and benchmark runs were reproducible.",
+          "Documented the schema and configuration method so other developers can maintain it."
+        ]
+      },
+      "metrics": "30–60% lower query latency • 12 configurations tested"
     },
     {
       "id": "ai-resume-extractor",
       "title": "AI Resume Extractor & Pipeline",
       "category": "aiml",
-      "tags": ["Python", "n8n", "REST/JSON", "Generative AI", "python-docx"],
-      "summary": "End-to-end automated intake pipeline extracting candidate data via GenAI REST APIs and generating structured DOCX reports.",
-      "metrics": "Automated Candidate Reporting • Zero Manual Entry",
-      "details": {
-        "problem": "Manual resume evaluation created severe throughput bottlenecks and inconsistent candidate assessments across high-volume hiring funnels.",
-        "solution": "Engineered an automated intake-to-report workflow connecting front-end submission hooks to back-end GenAI models via REST APIs with dynamic python-docx report generation.",
-        "architecture": "Front-End Intake Hook ➔ n8n Orchestrator ➔ REST/JSON GenAI Prompt Engine ➔ Extraction Parser ➔ python-docx Report Generator",
-        "highlights": [
-          "Developed and iterated prompt designs across multiple LLM configurations, rigorously testing for extraction consistency",
-          "Automated formatted candidate analysis reports using python-docx for one-click stakeholder review",
-          "Documented end-to-end workflow enabling straightforward operational maintenance and team handoff"
-        ]
-      },
+      "tags": [
+        "Python",
+        "n8n",
+        "REST/JSON",
+        "Generative AI"
+      ],
+      "summary": "A workflow that sends resumes from an intake form to a generative AI model over a REST API and writes candidate reports with python-docx.",
       "links": {
         "github": "https://github.com/bhavyapatel0201/ResumeExtractor",
         "demo": ""
+      },
+      "details": {
+        "highlights": [
+          "Mapped a front-end intake process to a back-end pipeline that calls a generative AI model over REST.",
+          "Tested the prompt design and automation logic across several configurations to find the most reliable setup.",
+          "Generated formatted candidate reports with python-docx and documented the workflow for handoff."
+        ]
       }
     },
     {
       "id": "plant-disease-detection",
       "title": "Plant Leaf Disease Detection CNN",
       "category": "aiml",
-      "tags": ["Python", "TensorFlow", "CNN", "Computer Vision", "Data Augmentation"],
-      "summary": "Deep convolutional neural network trained on plant leaf imagery, reaching 96.58% classification accuracy across multiple disease types.",
-      "metrics": "96.58% Classification Accuracy • Precision & Recall Verified",
-      "details": {
-        "problem": "Accurate early-stage plant disease detection requires robust visual feature classification invariant to lighting shifts and leaf angles.",
-        "solution": "Built and trained a multi-class CNN in TensorFlow with rigorous image augmentation, confusion matrix diagnostics, and iterative layer refinement.",
-        "architecture": "Leaf Images ➔ Preprocessing & Augmentation ➔ Multi-Layer CNN (Conv2D + MaxPool + Dropout) ➔ Dense Classification Head ➔ Disease Diagnosis",
-        "highlights": [
-          "Attained 96.58% test classification accuracy across diverse plant pathology categories",
-          "Implemented data augmentation (flips, rotations, lighting adjustments) to prevent overfitting",
-          "Evaluated performance using per-class precision, recall, and confusion-matrix analysis"
-        ]
-      },
+      "tags": [
+        "Python",
+        "TensorFlow",
+        "CNN"
+      ],
+      "summary": "A TensorFlow CNN that classifies plant leaf images by disease, reaching 96.58% accuracy.",
       "links": {
         "github": "",
         "demo": ""
-      }
+      },
+      "details": {
+        "highlights": [
+          "Trained a convolutional neural network to classify leaf images by disease type, reaching 96.58% accuracy.",
+          "Preprocessed and augmented the images to generalize across lighting and leaf conditions.",
+          "Evaluated with precision, recall and confusion matrices per class, then iterated on the architecture."
+        ]
+      },
+      "metrics": "96.58% accuracy"
     },
     {
       "id": "stock-market-forecasting",
       "title": "Stock Market Analysis & Prediction",
       "category": "aiml",
-      "tags": ["Python", "SARIMAX", "pandas", "Streamlit", "Time-Series"],
-      "summary": "Predictive time-series forecasting pipeline covering 10 major companies with news signals and an interactive Streamlit dashboard.",
-      "metrics": "40% Faster Insight Extraction • 10 Major Equities",
-      "details": {
-        "problem": "Traditional financial models fail to combine exogenous real-time news developments with underlying stock price momentum.",
-        "solution": "Developed a SARIMAX forecasting engine integrating news events as exogenous predictive signals, accompanied by an interactive Streamlit dashboard.",
-        "architecture": "Market Price History + News Signals ➔ pandas Cleaning & Stationarity Checks ➔ SARIMAX Engine ➔ Streamlit Interactive Dashboard",
-        "highlights": [
-          "Streamlit dashboard surfaced forecast outputs and trend curves, cutting insight-extraction time by ~40% for stakeholders",
-          "Iterated on model hyper-parameters (p, d, q) and seasonal components across 10 major enterprises",
-          "Detailed methodology, trade-offs, and forecasting assumptions documented for management"
-        ]
-      },
+      "tags": [
+        "Python",
+        "SARIMAX",
+        "pandas",
+        "Streamlit"
+      ],
+      "summary": "SARIMAX forecasting on historical stock data, with a Streamlit dashboard that presents the results.",
       "links": {
         "github": "",
         "demo": ""
+      },
+      "details": {
+        "highlights": [
+          "Built a Python pipeline to clean and structure historical time-series data.",
+          "Developed a SARIMAX forecasting model and validated it against historical data.",
+          "Built a Streamlit dashboard so non-technical readers can review forecasts and trends.",
+          "Compared forecast accuracy across parameters and input features before settling on a setup."
+        ]
       }
     },
     {
       "id": "stereo-image-matching",
       "title": "Stereo Image Matching & Epipolar Geometry",
       "category": "aiml",
-      "tags": ["OpenCV", "SIFT", "RANSAC", "MAGSAC++", "Computer Vision"],
-      "summary": "Classical computer vision implementation for stereo image matching, epipolar geometry estimation, and outlier rejection.",
-      "metrics": "Robust Fundamental Matrix Estimation • Sub-pixel Accuracy",
-      "details": {
-        "problem": "Stereo depth estimation requires accurate feature correspondence and robust fundamental matrix computation despite heavy visual outliers.",
-        "solution": "Employed SIFT feature extraction, epipolar line constraints, and compared RANSAC vs. MAGSAC++ estimators across challenging image pairs.",
-        "architecture": "Stereo Image Pair ➔ SIFT Keypoint & Descriptor Extraction ➔ FLANN Matcher ➔ RANSAC/MAGSAC++ Matrix Estimation ➔ Epipolar Geometry Verification",
-        "highlights": [
-          "Estimated and refined fundamental and essential matrices across outlier-heavy image pairs",
-          "Visualized matched keypoints and epipolar lines directly in OpenCV to mathematically verify geometric correctness"
-        ]
-      },
+      "tags": [
+        "OpenCV",
+        "SIFT",
+        "RANSAC",
+        "MAGSAC++"
+      ],
+      "summary": "Stereo image matching with SIFT features and epipolar geometry, comparing RANSAC and MAGSAC++.",
       "links": {
         "github": "https://github.com/bhavyapatel0201/Stereo-Image-Matching-and-Epipolar-Geometry",
         "demo": ""
+      },
+      "details": {
+        "highlights": [
+          "Matched stereo images using SIFT feature detection and epipolar geometry constraints.",
+          "Estimated fundamental and essential matrices with RANSAC and MAGSAC++ on outlier-heavy image pairs.",
+          "Drew matched keypoints and epipolar lines in OpenCV to check the geometry."
+        ]
       }
     },
     {
       "id": "transfer-learning-classification",
       "title": "Transfer Learning for Object Classification",
       "category": "aiml",
-      "tags": ["PyTorch", "VGG19", "DenseNet121", "Hyperparameter Search"],
-      "summary": "PyTorch computer vision pipeline comparing fine-tuned VGG19 and DenseNet121 architectures via systematic hyperparameter optimization.",
-      "metrics": "Systematic Multi-Model Benchmarking",
-      "details": {
-        "problem": "Selecting the optimal deep feature extractor and learning rate schedules for domain-specific visual classification.",
-        "solution": "Constructed a comparative PyTorch training pipeline testing VGG19 against DenseNet121 with automated augmentation and validation tracking.",
-        "architecture": "Augmented Training Batches ➔ Pre-trained Backbone (VGG19 / DenseNet121) ➔ Custom Classification Head ➔ Validation Benchmark",
-        "highlights": [
-          "Preprocessed and augmented image datasets to maximize generalization performance",
-          "Conducted systematic hyperparameter search across learning rates, optimizers, and batch sizes"
-        ]
-      },
+      "tags": [
+        "PyTorch",
+        "VGG19",
+        "DenseNet121"
+      ],
+      "summary": "Image classification in PyTorch with transfer learning, comparing VGG19 and DenseNet121.",
       "links": {
         "github": "https://github.com/bhavyapatel0201/Transfer-Learning-Object-Classification",
         "demo": ""
+      },
+      "details": {
+        "highlights": [
+          "Built an image classification pipeline in PyTorch using transfer learning on VGG19 and DenseNet121.",
+          "Ran a hyperparameter search across model configurations to find the strongest setup.",
+          "Preprocessed and augmented the dataset, then compared both architectures on validation accuracy."
+        ]
       }
     },
     {
       "id": "credit-card-analysis",
       "title": "Credit Card Comparison & Web Automation",
       "category": "data",
-      "tags": ["Python", "Selenium", "BeautifulSoup", "pandas", "ETL"],
-      "summary": "Automated data harvesting and cross-validation pipeline extracting and analyzing reward metrics across 20 credit cards.",
-      "metrics": "20 Cards Researched • Automated Data Validation",
-      "details": {
-        "problem": "Financial products frequently update fees, interest rates, and rewards across disparate live web sources without structured APIs.",
-        "solution": "Built automated web scrapers with Selenium and BeautifulSoup, backed by pandas data quality checks to flag anomalies before reporting.",
-        "architecture": "Live Card Sources ➔ Selenium/BeautifulSoup Scraper ➔ Data-Quality Validation Checks ➔ pandas DataFrame ➔ Consolidated Report",
-        "highlights": [
-          "Designed data-quality filters to automatically catch inconsistencies and anomalies",
-          "Consolidated findings into a cleanly structured comparison matrix for non-technical readers"
-        ]
-      },
+      "tags": [
+        "Python",
+        "Selenium",
+        "BeautifulSoup",
+        "pandas"
+      ],
+      "summary": "Python automation that collected and cross-checked data on 20 credit cards from live sources.",
       "links": {
         "github": "https://github.com/bhavyapatel0201/Credit-Card-Comparison-Analysis-",
         "demo": ""
-      }
+      },
+      "details": {
+        "highlights": [
+          "Collected and cross-checked data on 20 credit cards from live websites with Selenium and BeautifulSoup.",
+          "Added data-quality checks that flag inconsistencies before they reach the report.",
+          "Wrote one comparison report for a non-technical reader, with extraction logic that can be re-run as sources change."
+        ]
+      },
+      "metrics": "20 credit cards compared"
     },
     {
       "id": "expense-tracker-android",
       "title": "Expense Tracker Android App",
       "category": "systems",
-      "tags": ["Java", "Android Studio", "Gradle", "Unit Testing", "Mobile"],
-      "summary": "Native Android expense management application built in Java with unit-tested calculation flows and Gradle dependency configuration.",
-      "metrics": "Comprehensive Unit Test Coverage",
-      "details": {
-        "problem": "Users need an intuitive, offline-capable mobile application to record and categorize daily expenditures accurately.",
-        "solution": "Developed a native Java Android application following clean UI data-entry patterns, verified with unit tests for calculation accuracy.",
-        "architecture": "Android XML Layouts ➔ Activity / Fragment Controllers ➔ Expense Data Model ➔ Unit Test Validation Suite",
-        "highlights": [
-          "Wrote unit tests to validate calculation logic and transaction data handling, catching regressions early",
-          "Managed build configuration and dependencies cleanly with Gradle"
-        ]
-      },
+      "tags": [
+        "Java",
+        "Android Studio",
+        "Gradle"
+      ],
+      "summary": "An Android expense tracker in Java, with unit tests for its calculation logic.",
       "links": {
         "github": "",
         "demo": ""
+      },
+      "details": {
+        "highlights": [
+          "Built the core UI and data-entry flows in Java from a specification.",
+          "Wrote unit tests for the calculation and data-handling logic before adding features.",
+          "Managed the build and dependencies with Gradle."
+        ]
       }
     },
     {
       "id": "solar-unit-calculator",
       "title": "Solar Unit Calculator",
       "category": "web",
-      "tags": ["HTML", "CSS", "JavaScript", "Front-End", "Validation"],
-      "summary": "Interactive web calculator estimating solar panel power output, environmental savings, and financial returns with robust input sanitization.",
-      "metrics": "Responsive Layout • Real-Time Calculation",
-      "details": {
-        "problem": "Homeowners require immediate, transparent estimates of solar power output based on variable energy consumption inputs.",
-        "solution": "Engineered a client-side calculation tool in vanilla HTML/CSS/JavaScript with defensive input validation to guard against out-of-range entries.",
-        "architecture": "Energy Usage Inputs ➔ Real-time Validation Engine ➔ Solar Output & Savings Formula ➔ Dynamic Results View",
-        "highlights": [
-          "Implemented computation logic and responsive interface entirely in vanilla web technologies",
-          "Enforced strict validation to handle edge-case inputs gracefully"
-        ]
-      },
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "summary": "A browser calculator that estimates solar panel output and savings from energy-usage inputs.",
       "links": {
         "github": "",
         "demo": ""
+      },
+      "details": {
+        "highlights": [
+          "Wrote the calculation logic and a responsive layout in plain HTML, CSS and JavaScript.",
+          "Validated inputs so invalid or out-of-range entries never reach the calculation."
+        ]
       }
     }
   ],
   "skills": {
-    "Programming Languages": [
-      { "name": "Python", "level": "Advanced" },
-      { "name": "Java", "level": "Proficient" },
-      { "name": "JavaScript", "level": "Proficient" },
-      { "name": "C", "level": "Intermediate" },
-      { "name": "SQL", "level": "Advanced" }
+    "Programming languages": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "C",
+      "SQL"
     ],
-    "Databases & Data Engineering": [
-      { "name": "PostgreSQL", "level": "Advanced" },
-      { "name": "MySQL", "level": "Proficient" },
-      { "name": "SQLite", "level": "Proficient" },
-      { "name": "Docker", "level": "Proficient" },
-      { "name": "ETL Pipeline Design", "level": "Advanced" },
-      { "name": "Star-Schema Modeling", "level": "Advanced" }
+    "Databases and data engineering": [
+      "PostgreSQL",
+      "MySQL",
+      "SQLite",
+      "Docker",
+      "ETL pipeline design",
+      "Star-schema modeling"
     ],
-    "AI/ML & Data Science": [
-      { "name": "PyTorch", "level": "Advanced" },
-      { "name": "TensorFlow", "level": "Advanced" },
-      { "name": "SARIMAX Forecasting", "level": "Advanced" },
-      { "name": "Natural Language Processing (NLP)", "level": "Advanced" },
-      { "name": "Computer Vision (OpenCV)", "level": "Proficient" },
-      { "name": "Streamlit", "level": "Advanced" },
-      { "name": "Power BI", "level": "Proficient" }
+    "Machine learning and data science": [
+      "PyTorch",
+      "TensorFlow",
+      "SARIMAX forecasting",
+      "NLP",
+      "Computer vision (OpenCV)",
+      "Power BI",
+      "Streamlit"
     ],
-    "Systems, Automation & Tools": [
-      { "name": "Unix/Linux Systems Programming", "level": "Proficient" },
-      { "name": "Shell Scripting", "level": "Proficient" },
-      { "name": "Process Management", "level": "Proficient" },
-      { "name": "Socket Programming", "level": "Intermediate" },
-      { "name": "n8n Automation", "level": "Advanced" },
-      { "name": "Git / GitHub", "level": "Advanced" },
-      { "name": "REST APIs", "level": "Advanced" },
-      { "name": "Unit & Integration Testing", "level": "Proficient" },
-      { "name": "AI Coding Assistants (Copilot, Claude)", "level": "Advanced" }
+    "Systems and automation": [
+      "Unix/Linux systems programming",
+      "Shell scripting",
+      "Process management",
+      "Socket programming",
+      "n8n automation"
+    ],
+    "Tools and practices": [
+      "Git/GitHub",
+      "REST APIs",
+      "Unit and integration testing",
+      "GitHub Copilot",
+      "Claude Code"
     ]
   },
   "certifications": [
@@ -560,15 +623,28 @@ window.DEFAULT_CONTENT_FALLBACK = {
     }
   ],
   "contact": {
-    "heading": "Let's Connect & Collaborate",
-    "subheading": "I am open to 4–8 month Co-Op positions commencing in January 2027, as well as AI/ML, Data Engineering, and Software Development collaborations.",
+    "heading": "Get in touch",
+    "subheading": "Email is the quickest way to reach me. I'm in Windsor, Ontario, and open to a 4–8 month co-op from January 2027.",
     "email": "patel61d@uwindsor.ca",
     "phone": "+1 (289) 968-3185",
     "location": "Windsor, ON, Canada",
+    "formEndpoint": "https://formsubmit.co/ajax/patel61d@uwindsor.ca",
     "socialLinks": [
-      { "platform": "Email", "url": "mailto:patel61d@uwindsor.ca", "handle": "patel61d@uwindsor.ca" },
-      { "platform": "LinkedIn", "url": "https://www.linkedin.com/in/bhavya-patel-data", "handle": "Bhavya Patel" },
-      { "platform": "GitHub", "url": "https://github.com/bhavyapatel0201", "handle": "Bhavya Patel" }
+      {
+        "platform": "Email",
+        "url": "mailto:patel61d@uwindsor.ca",
+        "handle": "patel61d@uwindsor.ca"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/in/bhavya-patel-data",
+        "handle": "Bhavya Patel"
+      },
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/bhavyapatel0201",
+        "handle": "Bhavya Patel"
+      }
     ]
   }
 };

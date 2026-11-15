@@ -1279,8 +1279,8 @@ main:focus {
 
 .skills-pill-group {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .skill-pill-item {
@@ -3315,4 +3315,97 @@ html.is-swiping * {
   .typing-caret {
     display: none;
   }
+}
+
+/* ---------- November 2026 polish ---------- */
+/* Hero copy sits over the 3D sphere: a soft halo in the page colour keeps it readable */
+.hero-tagline,
+.hero-role-badge,
+.hero-title {
+  text-shadow: 0 0 18px var(--bg-primary), 0 0 6px var(--bg-primary);
+}
+
+/* Secondary hero action as a quiet text link instead of a fourth button */
+.hero-text-link {
+  grid-column: 1 / -1;
+  justify-self: center;
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  padding: 0 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+.hero-text-link:hover,
+.hero-text-link:focus-visible {
+  color: var(--text-primary);
+  text-decoration-color: currentColor;
+}
+
+/* Second About paragraph */
+#aboutBio2 {
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Experience: a line that draws as you scroll (js/gsap-motion.js) */
+.experience-list {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.experience-list::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--border-subtle);
+}
+.experience-list .experience-card::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.5rem - 5px);
+  top: clamp(1.6rem, 1.2rem + 1.5vw, 2.6rem);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--border-subtle);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.experience-list .experience-card.is-reached::before,
+.no-gsap .experience-list .experience-card::before {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-primary) 25%, transparent);
+}
+.timeline-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(var(--accent-primary), var(--accent-cyan));
+  transform-origin: top;
+  transform: scaleY(0);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* Skills: five groups as a 3 + 2 layout on wide screens, so no card is left alone on a row */
+@media (min-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .skills-grid > .skill-category-card { grid-column: span 2; }
+  .skills-grid > .skill-category-card:nth-child(n + 4) { grid-column: span 3; }
 }

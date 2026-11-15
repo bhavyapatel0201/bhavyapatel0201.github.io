@@ -66,7 +66,11 @@ These drive the filter buttons (AI/ML, Data, Systems, Web). To add a new categor
 `CATEGORIES` at the top of `js/projects.js`.
 
 > Note: `js/fallback-data.js` is a copy of the content used only when the page is opened
-> straight from disk (`file://`). Keep it in sync if you rely on that.
+> straight from disk (`file://`). After editing `content.json`, run `node tools/build-fallback.js`
+> to regenerate it.
+
+The Experience timeline line that draws as you scroll uses GSAP + ScrollTrigger (cdnjs) in
+`js/gsap-motion.js`. Without GSAP, or with reduced motion, the timeline is shown complete.
 
 ### Accessibility & motion
 - Visitors with **reduced motion** turned on get no reveal, typing or hover-lift animations, and instant scrolling.

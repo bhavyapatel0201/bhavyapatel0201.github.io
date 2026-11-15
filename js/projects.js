@@ -183,10 +183,8 @@ window.ProjectsController = (function () {
       <h2 id="modalProjectTitle" style="font-size: clamp(1.35rem, 1.1rem + 1.2vw, 1.85rem); font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.2; padding-right: 2.5rem;">
         ${project.title}
       </h2>
-      ${section('Problem Statement', 'var(--accent-primary)', `<p style="color: var(--text-secondary); line-height: 1.6;">${project.details?.problem || project.summary}</p>`)}
-      ${project.details?.solution ? section('Engineered Solution', 'var(--accent-cyan)', `<p style="color: var(--text-secondary); line-height: 1.6;">${project.details.solution}</p>`) : ''}
-      ${project.details?.architecture ? section('System Dataflow & Architecture', 'var(--accent-emerald)', `<div class="modal-arch-diagram">${project.details.architecture}</div>`) : ''}
-      ${project.details?.highlights?.length ? section('Key Engineering Highlights', 'var(--text-primary)',
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">${project.summary}</p>
+      ${project.details?.highlights?.length ? section('What I built', 'var(--accent-primary)',
         `<ul class="modal-highlights-list">${project.details.highlights.map((h) => `<li>${h}</li>`).join('')}</ul>`) : ''}
       <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
         <ul class="project-tags" aria-label="Technologies" style="margin-bottom: 0;">

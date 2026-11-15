@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Shared with the command palette
   window.PortfolioData = content;
+  document.dispatchEvent(new CustomEvent('portfolio:content-ready'));
   loadAnalytics(content.analytics);
 
   // Scroll-reveal for everything rendered above, then type the hero tagline
@@ -152,6 +153,12 @@ function hydrateAbout(data) {
   const bioContainer = document.getElementById('aboutBioParagraph');
   if (bioContainer && profile?.bio) {
     bioContainer.textContent = profile.bio;
+    if (profile.bio2 && !document.getElementById('aboutBio2')) {
+      const p2 = document.createElement('p');
+      p2.id = 'aboutBio2';
+      p2.textContent = profile.bio2;
+      bioContainer.after(p2);
+    }
   }
 
   // Education Timeline
@@ -219,8 +226,7 @@ function hydrateSkills(data) {
       <div class="skills-pill-group">
         ${list.map((skill, i) => `
           <div class="skill-pill-item" style="--i: ${i}">
-            <span class="skill-name">${skill.name}</span>
-            <span class="skill-level-badge">${skill.level}</span>
+            <span class="skill-name">${typeof skill === 'string' ? skill : skill.name}</span>
           </div>
         `).join('')}
       </div>
