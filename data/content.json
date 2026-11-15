@@ -314,27 +314,27 @@
     },
     {
       "id": "credit-card-analysis",
-      "title": "Credit Card Comparison & Web Automation",
+      "title": "Credit Card Comparison & Web Search Engine",
       "category": "data",
       "tags": [
-        "Python",
-        "Selenium",
-        "BeautifulSoup",
-        "pandas"
+        "Java",
+        "Spring Boot",
+        "React",
+        "Selenium"
       ],
-      "summary": "Python automation that collected and cross-checked data on 20 credit cards from live sources.",
+      "summary": "University group project: a Spring Boot web app that crawls bank credit card pages with Selenium, counts keyword frequency, tracks search history and shows results in a React dashboard.",
       "links": {
         "github": "https://github.com/bhavyapatel0201/Credit-Card-Comparison-Analysis",
         "demo": ""
       },
       "details": {
         "highlights": [
-          "Collected and cross-checked data on 20 credit cards from live websites with Selenium and BeautifulSoup.",
-          "Added data-quality checks that flag inconsistencies before they reach the report.",
-          "Wrote one comparison report for a non-technical reader, with extraction logic that can be re-run as sources change."
+          "Crawls bank credit card pages with Selenium and ChromeDriver.",
+          "Counts keyword frequency across crawled pages and records search history.",
+          "React and Vite dashboard connected to a Spring Boot REST API."
         ]
       },
-      "metrics": "20 credit cards compared"
+      "metrics": "University group project"
     },
     {
       "id": "expense-tracker-android",
